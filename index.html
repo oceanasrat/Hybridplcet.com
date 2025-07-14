@@ -131,35 +131,88 @@
 
 
         <!-- Booking Form Section -->
-        <section id="booking" class="bg-gray-100 py-12 md:py-20 -mt-20 relative z-10 mx-4 md:mx-auto max-w-6xl rounded-xl shadow-2xl">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl font-bold text-center mb-8 text-gray-900">Find Your Next Ride</h2>
-                <form class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 items-end">
-                    <div class="space-y-2">
-                        <label for="pickup-location" class="font-medium text-gray-700">Pick-up Location</label>
-                        <input type="text" id="pickup-location" placeholder="Addis Ababa, Bole Airport..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                    </div>
-                    <div class="space-y-2">
-                        <label for="pickup-date" class="font-medium text-gray-700">Pick-up Date</label>
-                        <input type="date" id="pickup-date" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                    </div>
-                    <div class="space-y-2">
-                        <label for="return-date" class="font-medium text-gray-700">Return Date</label>
-                        <input type="date" id="return-date" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                    </div>
-                    <div class="space-y-2 lg:col-span-1">
-                        <label for="car-type" class="font-medium text-gray-700">Car Type</label>
-                         <select id="car-type" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                            <option>Any Hybrid</option>
-                            <option>Compact</option>
-                            <option>SUV</option>
-                            <option>Luxury</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="w-full bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold text-lg hover:bg-emerald-700 transition duration-300 shadow-md md:col-span-2 lg:col-span-1">Search</button>
-                </form>
-            </div>
-        </section>
+        <!-- Booking Form Section -->
+<section id="booking" class="bg-gray-100 py-12 md:py-20 -mt-20 relative z-10 mx-4 md:mx-auto max-w-6xl rounded-xl shadow-2xl">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-8 text-gray-900">Book Your Ride</h2>
+    <form action="https://formsubmit.co/wykiyanosa@gmail.com" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6 items-end">
+      <!-- Hidden inputs for Formsubmit -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://oceanautodetailingtx.com/thank-you.html">
+
+      <!-- Customer Info -->
+      <div class="space-y-2">
+        <label class="font-medium text-gray-700">Full Name</label>
+        <input type="text" name="name" required placeholder="Your Name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-emerald-500">
+      </div>
+      <div class="space-y-2">
+        <label class="font-medium text-gray-700">Phone Number</label>
+        <input type="tel" name="phone" required placeholder="e.g. 214-000-0000" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-emerald-500">
+      </div>
+      <div class="space-y-2">
+        <label class="font-medium text-gray-700">Email Address</label>
+        <input type="email" name="email" required placeholder="example@email.com" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-emerald-500">
+      </div>
+
+      <!-- Booking Info -->
+      <div class="space-y-2">
+        <label class="font-medium text-gray-700">Pick-up Location</label>
+        <input type="text" name="pickup-location" placeholder="Addis Ababa, Bole..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-emerald-500">
+      </div>
+      <div class="space-y-2">
+        <label class="font-medium text-gray-700">Pick-up Date</label>
+        <input type="date" name="pickup-date" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-emerald-500">
+      </div>
+      <div class="space-y-2">
+        <label class="font-medium text-gray-700">Return Date</label>
+        <input type="date" name="return-date" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-emerald-500">
+      </div>
+
+      <!-- Car Type with Price -->
+      <div class="space-y-2 md:col-span-2">
+        <label class="font-medium text-gray-700">Select Vehicle</label>
+        <select name="car-type" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-emerald-500">
+          <option disabled selected>Choose a Vehicle</option>
+          <option>7-Seater Automobile – $20–$40/day</option>
+          <option>Minivan – $20–$50/day</option>
+          <option>Mini Bus – $50–$100/day</option>
+          <option>Medium Bus – $75–$150/day</option>
+          <option>Big Bus – $100–$300/day</option>
+          <option>Toyota Land Cruiser – $100–$400/day</option>
+          <option>Mercedes-Benz – $20–$50/day</option>
+          <option>Suzuki Dzire – $15–$20/day</option>
+          <option>Nissan Patrol – $100–$300/day</option>
+          <option>Mitsubishi Medium SUV – $25–$50/day</option>
+          <option>TOYOTA Hilux – $30–$50/day</option>
+          <option>Mini Cargo Van – $30–$50/day</option>
+          <option>Mini-Medium Cargo Truck – $100–$250/day</option>
+          <option>Cargo Truck – $100–$500/day</option>
+          <option>Other / Not Listed</option>
+        </select>
+      </div>
+
+      <!-- Extra Info -->
+      <div class="space-y-2">
+        <label class="font-medium text-gray-700">Need a Driver?</label>
+        <select name="need-driver" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-emerald-500">
+          <option>No</option>
+          <option>Yes</option>
+        </select>
+      </div>
+      <div class="space-y-2">
+        <label class="font-medium text-gray-700">Purpose of Rental</label>
+        <input type="text" name="purpose" placeholder="Business, Travel, Wedding, etc." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-emerald-500">
+      </div>
+
+      <!-- Submit Button -->
+      <div class="md:col-span-2">
+        <button type="submit" class="w-full bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold text-lg hover:bg-emerald-700 transition duration-300 shadow-md">
+          Submit Booking
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
  <!-- Landmark Image Section -->
         <section class="py-20 bg-white">
             <div class="container mx-auto px-6">
