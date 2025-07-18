@@ -303,6 +303,36 @@
   </div>
 
 </div>
+   <script>
+  let galleryIndex = 0;
+  const gallery = document.getElementById("gallerySlides");
+  const totalSlides = gallery.children.length;
+  const container = document.getElementById("galleryContainer");
+
+  function slideGallery() {
+    galleryIndex = (galleryIndex + 1) % totalSlides;
+    gallery.style.transform = `translateX(-${galleryIndex * 100}%)`;
+  }
+
+  let autoSlide = setInterval(slideGallery, 4000);
+
+  container.addEventListener("mouseenter", () => clearInterval(autoSlide));
+  container.addEventListener("mouseleave", () => {
+    autoSlide = setInterval(slideGallery, 4000);
+  });
+
+  // Swipe support
+  let startX = 0;
+  container.addEventListener("touchstart", e => startX = e.touches[0].clientX);
+  container.addEventListener("touchend", e => {
+    const endX = e.changedTouches[0].clientX;
+    if (endX < startX - 50) slideGallery();
+    if (endX > startX + 50) {
+      galleryIndex = (galleryIndex - 1 + totalSlides) % totalSlides;
+      gallery.style.transform = `translateX(-${galleryIndex * 100}%)`;
+    }
+  });
+   </script>
 
   </div><!-- Updated Auto-Sliding Vehicle Gallery -->
 <section id="gallery" class="py-16 bg-gray-100">
