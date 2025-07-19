@@ -729,10 +729,12 @@ so <!DOCTYPE html>
   document.addEventListener('alpine:init', () => {
     Alpine.data('testimonials', () => ({
       currentIndex: 0,
-      items: [
-        { 
-          text: "
+      items: [ /* ... */ ]
+    }));
+  });
+</script>
 
+<!-- ✅ Auto Sliding Gallery Script -->
 <script>
   let galleryIndex = 0;
   const gallery = document.getElementById("gallerySlides");
@@ -762,5 +764,6 @@ so <!DOCTYPE html>
     }
   });
 </script>
-</body>
 
+</body>
+     </html>
