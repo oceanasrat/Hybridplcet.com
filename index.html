@@ -23,33 +23,43 @@ so <!DOCTYPE html>
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-    .hero-section {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://placehold.co/1920x1080/334155/e2e8f0?text=Modern+Hybrid+Cars');
-      background-size: cover;
-      background-position: center;
-    }
-    .testimonial-bg {
-      background-color: #f8fafc;
-    }
-    .fade-in {
-      animation: fadeIn 1s ease-in-out;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .chat-bubble-user {
-      background-color: #d1fae5;
-      color: #064e3b;
-    }
-    .chat-bubble-ai {
-      background-color: #e5e7eb;
-      color: #1f2937;
-    }
-  </style>
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+  .hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://placehold.co/1920x1080/334155/e2e8f0?text=Modern+Hybrid+Cars');
+    background-size: cover;
+    background-position: center;
+  }
+  .testimonial-bg {
+    background-color: #f8fafc;
+  }
+  .fade-in {
+    animation: fadeIn 1s ease-in-out;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .chat-bubble-user {
+    background-color: #d1fae5;
+    color: #064e3b;
+  }
+  .chat-bubble-ai {
+    background-color: #e5e7eb;
+    color: #1f2937;
+  }
+
+  /* 🔥 Add This For Sliding Gallery Animation */
+  @keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .animate-slide {
+    animation: slide 30s linear infinite;
+  }
+</style>
 </head>
 
 <body class="bg-white text-gray-800">
